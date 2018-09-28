@@ -1,0 +1,2 @@
+# algoritimos
+exercicios a aulas 
