@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 29/08 - part 2</title>
+</head>
+<body>
+        Nome do Time:<input id="nome" type="text"> <br>
+        Titulos: <input id="titulos" type="text"><br>
+        Caracteristicas: <input id="caracteristica" type="text"><br>
+        <br><button onclick="cadastrar()">Cadastrar</button>
+        
+        <h3>Time Cadastrado</h3>
+        Time <b id="time_cadastrado"> </b>
+        possui <u id="titulos_cadastrados"></u> titulos e tem como caracteristica <i id="caracteristica_cadastrada"></i>
+
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        // pegando o valor digitado na caixa de texto e colocando numa variavel
+        var time_cadastrado = document.getElementById("nome").value;
+        document.getElementById("time_cadastrado").innerHTML = time_cadastrado;
+
+        var titulos_cadastrados = document.getElementById("titulos").value;
+        document.getElementById("titulos_cadastrados").innerHTML = titulos_cadastrados;
+
+        var caracteristica_cadastrada = document.getElementById("caracteristica").value;
+        document.getElementById("caracteristica_cadastrada").innerHTML = caracteristica_cadastrada;
+    }
+</script>

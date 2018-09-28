@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alterando o conteúdo da página com JS</title>
+</head>
+<body>
+
+    <span>Bairro 1</span><span id="bairro1"></span><br>
+    <span>População:</span><span id="habitante1"></span><span> Habitantes</span><br>
+    <span>Principal característica:</span><span id="caracteristica1">Principal característica:</span><br><br>
+
+    <span>Bairro 2</span><span id="bairro2"></span><br>
+    <span>População:</span><span id="habitante2"></span><span> Habitantes</span><br>
+    <span>Principal característica:</span><span id="caracteristica2"></span><br>
+
+    <script>
+    
+      var bairro1 = prompt("Digite o nome do bairro");
+      var habitante1 = prompt('Quantos habitantes tem?');
+      var caracteristica1 = prompt('Qual sua maior caracteristica?');
+
+      var bairro2 = prompt("Digite o nome do bairro");
+      var habitante2 = prompt('Quantos habitantes tem?');
+      var caracteristica2 = prompt('Qual sua maior caracteristica?');
+
+      // alterando o conteúdo de algum elemento html
+
+      document.getElementById("bairro1").innerHTML = bairro1;
+      document.getElementById("habitante1").innerHTML = habitante1;
+      document.getElementById("caracteristica1").innerHTML = caracteristica1;
+
+      document.getElementById("bairro2").innerHTML = bairro2;
+      document.getElementById("habitante2").innerHTML = habitante2;
+      document.getElementById("caracteristica2").innerHTML = caracteristica2;
+    </script>
+</body>
+</html>

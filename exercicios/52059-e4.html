@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alterando o conteúdo da página com JS</title>
+</head>
+<body>
+    <ul "list-style-type:disc" style="font-style: bold;">
+       <li style="font-weight: bold;">Corinthians:<span id="corin"></span></li>
+       <li style="font-weight: bold;">Palmeiras:<span id="palmeiras"></span></li>
+       <li style="font-weight: bold;" >Santos:<span id="santos"></span></li>
+       <li style="font-weight: bold;">São Paulo:<span id="saoPaulo"></span></li>
+    </ul>
+    <script>
+      var corin = prompt("Defina o time do Corinthians em uma frase");
+      var palmeiras = prompt('Defina o time do Palmeiras em uma frase');
+      var santos = prompt('Defina o time do Santos em uma frase');
+      var saoPaulo = prompt('Defina o time do São Paulo em uma frase');
+
+      // alterando o conteúdo de algum elemento html
+
+      document.getElementById("corin").innerHTML = corin;
+      document.getElementById("palmeiras").innerHTML = palmeiras;
+      document.getElementById("santos").innerHTML = santos;
+      document.getElementById("saoPaulo").innerHTML = saoPaulo;
+    </script>
+</body>
+</html>

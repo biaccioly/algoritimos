@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 3</title>
+</head>
+<body>
+
+    Oi!! <br>
+    <br>
+    Para começar, qual personagem da série <u>Crônicas de Nárnia</u> é seu favorito? <input id="personagem" type="text"> <br>
+
+    Agora me fala quais caracteristicas mais marcantes nele? 
+    <br>
+    <ol>
+        <li><input id="caracteristica1" type="text"> <br></li>
+        <li><input id="caracteristica2" type="text"> <br></li>
+        <li><input id="caracteristica3" type="text"> <br></li>
+    </ol>
+    Pronto! Agora é só clicar em cadastrar! <br> <button onclick="cadastrar()">Cadastrar personagem</button>
+    <br>
+    <br>
+    <br>
+    Nas <u>Crônicas de Nárnia</u>, o personagem <b style="color:gray;" id="personagem_cadastrado"></b> é sensacional por ser:
+    <br>
+    <ol>
+        <li><b style="color:blue;" id="caracteristica_cadastrada1"></b> <br></li>
+        <li><u style="color:green;" id="caracteristica_cadastrada2"></u> <br></li>
+        <li> <i style="color:red;" id="caracteristica_cadastrada3"></i> <br></li>
+    </ol>
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        // pegando o valor digitado na caixa de texto e colocando numa variavel
+        var personagem_cadastrado = document.getElementById("personagem").value;
+        document.getElementById("personagem_cadastrado").innerHTML = personagem_cadastrado;
+
+        var caracteristica_cadastrada1 = document.getElementById("caracteristica1").value;
+        document.getElementById("caracteristica_cadastrada1").innerHTML = caracteristica_cadastrada1;
+
+        var caracteristica_cadastrada2 = document.getElementById("caracteristica2").value;
+        document.getElementById("caracteristica_cadastrada2").innerHTML = caracteristica_cadastrada2;
+
+        var caracteristica_cadastrada3 = document.getElementById("caracteristica3").value;
+        document.getElementById("caracteristica_cadastrada3").innerHTML = caracteristica_cadastrada3;
+    }
+</script>

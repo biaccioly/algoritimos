@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinder Geek</title>
+</head>
+
+<body>
+    <ul>
+        <li>Qual seu nível de conversa? (0-10): <input id="conversa"></li>
+        <li>Quantos livros já leu? (mínimo de 0): <input id="livros"></li>
+        <li>Quantos jogos de celular, playstation ou xbox já jogou? (mínimo de 0): <input id="jogos"></li>
+        <li>Quantos namorados(as) ou ficantes já teve? (mínimo de 0): <input id="ex"></li>
+    </ul>
+    <br>
+    <button onclick="analisar()">Analisar Perfil</button> <br><br>
+
+    <div id="vereditoTotal" style="display:none;">
+        <u>Boa de conversa? </u> <span id="boa_conversa"></span> <br>
+        <u>Culta? </u> <span id="culta"></span> <br>
+        <u>Curte um videogame? </u> <span id="curte_videogame"></span> <br>
+        <u>Dificil de conquistar? </u> <span id="dificil_de_conquistar"></span><br>
+        <u>Boa de conversa e culta? </u> <span id="boa_conversa_culta"></span><br>
+        <u>Boa de conversa e curte um videogame? </u> <span id="conversa_videogame"></span> <br>
+        <u>Não é culta e ainda é difícil (tá dificil pra essa pessoa, hein)? </u> <span id="nculta_ruim_conversa"></span><br>
+        <br>
+        <b>Veredito: </b> Para eu marcar um encontro deve ser boa de conversa, culta mas não difícil de conquistar ou
+        difícil de conquistar e curtir um videogame. É o caso?<span id="veredito"></span>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+
+    function analisar() {
+
+        var conversa = Number(document.getElementById("conversa").value);
+        var livros = Number(document.getElementById("livros").value);
+        var jogos = Number(document.getElementById("jogos").value);
+        var qtdEx = Number(document.getElementById("ex").value);
+
+        var boa_de_conversa = conversa >= 6;
+        var culta = livros >= 10;
+        var curte_videogame = jogos >= 10;
+        var dificil_de_conquistar = qtdEx < 3;
+
+        if (conversa >= 11) {
+            alert("Valor inválido. Verifique as orientações");
+        }
+        if (livros < 0) {
+            alert("Valor inválido. Verifique as orientações");
+        }
+        if (jogos < 0) {
+            alert("Valor inválido. Verifique as orientações");
+        }
+        if (qtdEx < 0) {
+            alert("Valor inválido. Verifique as orientações");
+        }
+        else {
+            document.getElementById('vereditoTotal').style.display = "block";
+            // RESPOSTA SIM
+        if (boa_de_conversa) {
+            document.getElementById("boa_conversa").innerHTML = "SIM";
+        }
+        if (culta) {
+            document.getElementById("culta").innerHTML = "SIM";
+        }
+        if (jogos) {
+            document.getElementById("curte_videogame").innerHTML = "SIM";
+        }
+        if (dificil_de_conquistar) {
+            document.getElementById("dificil_de_conquistar").innerHTML = "SIM";
+        }
+        if (boa_de_conversa && culta) {
+            document.getElementById("boa_conversa_culta").innerHTML = "SIM";
+        }
+        if (boa_de_conversa && curte_videogame) {
+            document.getElementById("conversa_videogame").innerHTML = "SIM";
+        }
+        if (!culta && dificil_de_conquistar) {
+            document.getElementById("nculta_ruim_conversa").innerHTML = "SIM";
+        }
+        if (boa_de_conversa && culta && !dificil_de_conquistar || dificil_de_conquistar && curte_videogame) {
+            document.getElementById("veredito").innerHTML = "SIM";
+        }
+        if (dificil_de_conquistar && curte_videogame) {
+            document.getElementById("veredito").innerHTML = "SIM";
+        }
+
+        // RESPOSTA NÃO
+        if (!boa_de_conversa) {
+            document.getElementById("boa_conversa").innerHTML = "NÃO";
+        }
+        if (!culta) {
+            document.getElementById("culta").innerHTML = "NÃO";
+        }
+        if (!jogos) {
+            document.getElementById("curte_videogame").innerHTML = "NÃO";
+        }
+        if (!dificil_de_conquistar) {
+            document.getElementById("dificil_de_conquistar").innerHTML = "NÃO";
+        }
+        if (!boa_de_conversa && !culta) {
+            document.getElementById("boa_conversa_culta").innerHTML = "NÃO";
+        }
+        if (!boa_de_conversa || !curte_videogame) {
+            document.getElementById("conversa_videogame").innerHTML = "NÃO";
+        }
+        if (!culta && !dificil_de_conquistar) {
+            document.getElementById("nculta_ruim_conversa").innerHTML = "NÃO";
+        }
+        if (!boa_de_conversa && !culta && dificil_de_conquistar) {
+            document.getElementById("veredito").innerHTML = "NÃO";
+        }
+        if (!boa_de_conversa && !culta && dificil_de_conquistar) {
+            document.getElementById("veredito").innerHTML = "NÃO";
+        }
+        if (!dificil_de_conquistar && !curte_videogame) {
+            document.getElementById("veredito").innerHTML = "NÃO";
+        }
+        }
+
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alterando o conteúdo da página com JS</title>
+</head>
+<body style="background-color: yellow;">
+    Sua Motivação:<span id="motivacao" style="color:blue;"></span> <br>
+    Seu nome:<span id="nome" style="color:blue;"></span> <br>
+    Seu email:   <span id="email">     </span> <br>
+    Sua idade:<span id="idade" style="color:orange">  </span> <br>
+
+    <script>
+      var motiveSe = prompt("Motive-se");
+      var seuNome = prompt('Qual seu nome?');
+      var seuEmail = prompt('Qual seu email?');
+      var suaIdade = prompt('Qual sua idade?');
+
+      // alterando o conteúdo de algum elemento html
+
+      document.getElementById("motivacao").innerHTML = motiveSe;
+      document.getElementById("nome").innerHTML = seuNome;
+      document.getElementById("email").innerHTML = seuEmail;
+      document.getElementById("idade").innerHTML = suaIdade;
+    </script>
+</body>
+</html>

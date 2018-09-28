@@ -1,2 +1,2 @@
-# algoritimos
-exercicios a aulas 
+# aulaalgoritimos
+tutorial de git

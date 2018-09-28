@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercicio 3</title>
+</head>
+<body>
+
+        Time 1: <input id="time1">. 
+        Mundiais: <input id="mundiais1"> <br>
+    
+        Time 2: <input id="time2">. 
+        Mundiais: <input id="mundiais2"> <br>
+    
+        <br>
+    
+        <button onclick="comparar()">Comparar times</button>
+    
+        <div style="display: none" id="div_vencedor">
+        O <u id="vencedor"></u> é melhor que o 
+        <u id="perdedor"></u> 
+        porque ele tem <b id="mundiais_vencedor"></b> 
+        títulos mundiais contra <b id="mundiais_perdedor"></b>.
+        </div>
+    
+        <div style="display: none;" id="div_empate">
+        Os times se equivalem. Pode torcer para qualquer um.
+        </div>
+
+</body>
+</html>
+<script>
+
+    function comparar() {
+        var time1 = document.getElementById('time1').value;
+        var time2 = document.getElementById('time2').value;
+
+        var mundiais1 = Number(document.getElementById('mundiais1').value);
+        var mundiais2 = Number(document.getElementById('mundiais2').value);
+
+        // há empate
+        if (mundiais1 == mundiais2) {
+            document.getElementById('div_empate').style.display = "block";
+            document.getElementById("div_vencedor").style.display= 'none';
+        }
+        else {
+            // ha um vencedor
+            var vencedor;
+            var perdedor;
+            var mundiais_vencedor;
+            var mundiais_perdedor;
+            
+            //time 1 é melhor
+            if (mundiais1 > mundiais2) {
+                vencedor = time1;
+                perdedor = time2;
+                mundiais_vencedor = mundiais1;
+                mundiais_perdedor = mundiais2;
+            }
+
+            else {
+                //time 2 é melhor
+                vencedor = time2;
+                perdedor = time1
+                mundiais_vencedor = mundiais2;
+                mundiais_perdedor = mundiais1;
+            }
+        
+        document.getElementById("vencedor").innerHTML = vencedor;
+        document.getElementById("perdedor").innerHTML = perdedor;
+        document.getElementById("mundiais_vencedor").innerHTML = mundiais_vencedor;
+        document.getElementById("mundiais_perdedor").innerHTML = mundiais_perdedor;
+
+        document.getElementById("div_vencedor").style.display='block';
+        document.getElementById("div_empate").style.display='none';
+        }
+
+    }
+
+
+
+</script>

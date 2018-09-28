@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 29/08</title>
+</head>
+<body>
+        Nome do bairro:<input id="nome" type="text"> <br>
+        Habitantes: <input id="habitantes" type="text"><br>
+        Caracteristicas: <input id="caracteristica" type="text"><br>
+        <br><button onclick="cadastrar()">Cadastrar</button>
+        
+        <h3>Bairro cadastrado</h3>
+        <p>Bairro <b id="bairro_cadastrado"> </b>
+        possui <u id="habitantes_cadastrados"></u> habitantes e tem como caracteristica <i id="caracteristica_cadastrada"></i></p>
+
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        // pegando o valor digitado na caixa de texto e colocando numa variavel
+        var bairro_cadastrado = document.getElementById("nome").value;
+        document.getElementById("bairro_cadastrado").innerHTML = bairro_cadastrado;
+
+        var habitantes_cadastrados = document.getElementById("habitantes").value;
+        document.getElementById("habitantes_cadastrados").innerHTML = habitantes_cadastrados;
+
+        var caracteristica_cadastrada = document.getElementById("caracteristica").value;
+        document.getElementById("caracteristica_cadastrada").innerHTML = caracteristica_cadastrada;
+    }
+</script>

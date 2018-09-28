@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eta do Agreste</title>
+</head>
+<body>
+    Nome do produto: <input id="nomePrato1"> Valor unitário: <input id="valor1"> Quantidade: <input id="qtd1"> <br>
+    Nome do produto: <input id="nomePrato2"> Valor unitário: <input id="valor2"> Quantidade: <input id="qtd2"> <br>
+    Nome do produto: <input id="nomePrato3"> Valor unitário: <input id="valor3"> Quantidade: <input id="qtd3"> <br>
+    Nome do produto: <input id="nomePrato4"> Valor unitário: <input id="valor4"> Quantidade: <input id="qtd4"> <br>
+    <br>
+    <button onclick="calcular()">Calcular conta</button> <br>
+    <br>
+    <br>
+    <h2><b>Conta fechada</b></h2><br>
+    <ol>
+        <li><b id="nome1Mostra"></b> - R$<b id="valor1Mostra"></b>x <b id="qtd1Mostra"> </b> = <b id="valor1Final"></b></li>
+        <li><b id="nome2Mostra"></b> - R$<b id="valor2Mostra"></b>x <b id="qtd2Mostra"> </b> = <b id="valor2Final"></b></li>
+        <li><b id="nome3Mostra"></b> - R$<b id="valor3Mostra"></b>x <b id="qtd3Mostra"> </b> = <b id="valor3Final"></b></li>
+        <li><b id="nome4Mostra"></b> - R$<b id="valor4Mostra"></b>x <b id="qtd4Mostra"> </b> = <b id="valor4Final"></b></li>
+    </ol>
+    <br>
+    <b>Total:</b> R$ <u><b id="valorTotal"></b></u>
+</body>
+</html>
+<script>
+    function calcular() {
+
+        // Prato 1
+        var nome1 = document.getElementById("nomePrato1").value;
+        document.getElementById("nome1Mostra").innerHTML = nome1;
+
+        var valor1 = document.getElementById("valor1").value;
+        document.getElementById("valor1Mostra").innerHTML = valor1;
+
+        var qtd1 = document.getElementById("qtd1").value;
+        document.getElementById("qtd1Mostra").innerHTML = qtd1;
+
+        var valor1 = Number(document.getElementById("valor1").value);
+        var qtd1 = Number(document.getElementById("qtd1").value);
+        var valor1Final = valor1 * qtd1;
+        document.getElementById("valor1Final").innerHTML = valor1Final;
+
+        // Prato 2
+        var nome2 = document.getElementById("nomePrato2").value;
+        document.getElementById("nome2Mostra").innerHTML = nome2;
+
+        var valor2 = document.getElementById("valor2").value;
+        document.getElementById("valor2Mostra").innerHTML = valor2;
+
+        var qtd2 = document.getElementById("qtd2").value;
+        document.getElementById("qtd2Mostra").innerHTML = qtd2;
+
+        var valor2 = Number(document.getElementById("valor2").value);
+        var qtd2 = Number(document.getElementById("qtd2").value);
+        var valor2Final = valor2 * qtd2;
+        document.getElementById("valor2Final").innerHTML = valor2Final;
+
+         // Prato 3
+         var nome3 = document.getElementById("nomePrato3").value;
+        document.getElementById("nome3Mostra").innerHTML = nome3;
+
+        var valor3 = document.getElementById("valor3").value;
+        document.getElementById("valor3Mostra").innerHTML = valor3;
+
+        var qtd3 = document.getElementById("qtd3").value;
+        document.getElementById("qtd3Mostra").innerHTML = qtd3;
+
+        var valor3 = Number(document.getElementById("valor3").value);
+        var qtd3 = Number(document.getElementById("qtd3").value);
+        var valor3Final = valor3 * qtd3;
+        document.getElementById("valor3Final").innerHTML = valor3Final;
+
+         // Prato 4
+         var nome4 = document.getElementById("nomePrato4").value;
+        document.getElementById("nome4Mostra").innerHTML = nome4;
+
+        var valor4 = document.getElementById("valor4").value;
+        document.getElementById("valor4Mostra").innerHTML = valor4;
+
+        var qtd4 = document.getElementById("qtd4").value;
+        document.getElementById("qtd4Mostra").innerHTML = qtd4;
+
+        var valor4 = Number(document.getElementById("valor4").value);
+        var qtd4 = Number(document.getElementById("qtd4").value);
+        var valor4Final = valor4 * qtd4;
+        document.getElementById("valor4Final").innerHTML = valor4Final;
+
+        var valorTotal = valor1Final+valor2Final+valor3Final+valor4Final;
+        document.getElementById("valorTotal").innerHTML = valorTotal;
+
+
+    }
+</script>

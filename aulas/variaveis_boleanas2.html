@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var idade = Number(prompt('qual sua idade?'));
+    var salario = Number(prompt('quanto seus pais ganham?'));
+
+    var menor_de_idade = idade < 16;
+    var renda = salario >= 1500;
+
+    if (menor_de_idade) {
+        alert("vai jogar playstation!");
+    }
+    if (!menor_de_idade && !renda) {
+        alert("Você já pode votar! Exerça sua cidadania!");
+        alert("Você já pode assistir certos filmes no cinema, mas a grana não dá :(")
+    }
+    if (!menor_de_idade && renda) {
+        alert("Você já pode votar! Exerça sua cidadania!");
+        alert("Você já pode assistir certos filmes no cinema, e a mesada já te permite ir de vez em quando ;)")
+    }
+
+    
+</script>

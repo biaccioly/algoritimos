@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão 2</title>
+</head>
+<body>
+
+    Oi! Vamos criar a sua conta! <br>
+    <br>
+    Para começar, digite o seu nome : <input id="nome" type="text"> <br>
+
+    Ótimo, agora digite quanto você quer depositar na sua primeira operação : <input id="deposito" type="text"> <br>
+
+    Bacana, agora quanto você quer investir mensalmente? <input id="investimento" type="text"> <br>
+    <br>
+    Pronto! Agora é só clicar em cadastrar! <br> <button onclick="cadastrar()">Cadastrar minha conta</button>
+    <br>
+    <br>
+    <br>
+    Sua nova conta é:
+    <br>
+    <h3 style="color:gray;"><b>Banco Tário - Novo correntista</b></h3> <br>
+    Correntista: <b style="color:red;"><span id="nome_cadastrado"></span></b> <br>
+    Valor inicial da conta: <b style="color:green;">R$<span id="deposito_cadastrado"></span></b> <br>
+    Investimento mensal:<b style="color:blue;">R$<span id="investimento_cadastrado"></span></b> <br>
+
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        // pegando o valor digitado na caixa de texto e colocando numa variavel
+        var nome_cadastrado = document.getElementById("nome").value;
+        document.getElementById("nome_cadastrado").innerHTML = nome_cadastrado;
+
+        var deposito_cadastrado = document.getElementById("deposito").value;
+        document.getElementById("deposito_cadastrado").innerHTML = deposito_cadastrado;
+
+        var investimento_cadastrado = document.getElementById("investimento").value;
+        document.getElementById("investimento_cadastrado").innerHTML = investimento_cadastrado;
+    }
+</script>

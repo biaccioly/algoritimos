@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var idade = Number(prompt('qual sua idade?'));
+    var sexo = prompt('qual seu sexo? (m ou h)?');
+
+    //criando variaveis boleanas
+    //ou seja, que guardam "verdadeiro" ou "falso"
+    // OBS: para o computador são "true" ou "false"
+
+    var menor_de_idade = idade < 18;
+    //a menor_de_idade vai receber somente "true" ou "false"
+    var mulher = sexo == 'm';
+    //a mulher vai receber somente "true" ou "false"
+    var homem = sexo == 'h';
+
+    if (menor_de_idade && mulher) {
+        alert('mulher menor de idade');
+    }
+    if (!menor_de_idade && mulher) {
+        alert('mulher maior de idade');
+    }
+    if (menor_de_idade && homem) {
+        alert('homem menor de idade');
+    }
+    if (!menor_de_idade && homem) {
+        alert('homem maior de idade');
+    }
+</script>

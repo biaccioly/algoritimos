@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juliana apaixonada</title>
+</head>
+<body>
+
+    Quantos beijos você deu hoje: <input id="qtdBeijo"> <br>
+    Quantas horas de malhação você fez hoje: <input id="qtdMalhacao"><br>
+    <br>
+    <button onclick="calcular()">Descobrir perda cálorica</button>
+    <br>
+    <br>
+    <br>
+    
+
+    <h2>Calorias perdidas hoje</h2>
+    Beijos: <b id="calBeijo"></b><br>
+    Malhação: <b id="calMalhacao"></b><br>
+    Total hoje: <b><u id="somaCal"></u></b> Calorias. <br>
+
+    <h2>Calorias perdidas nesse ritmo:</h2><br>
+    Em <b>1 semana:</b> <b id="calSemana"></b> <br>
+    Em <b>1 mês:</b> <b id="calMes"></b><br>
+
+
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var qtdBeijo = Number(document.getElementById("qtdBeijo").value);
+        var qtdMalhacao = Number(document.getElementById("qtdMalhacao").value);
+
+        var calBeijo = qtdBeijo * 20;
+        var calMalhacao = qtdMalhacao * 150;
+
+        document.getElementById("calBeijo").innerHTML = calBeijo;
+        document.getElementById("calMalhacao").innerHTML = calMalhacao;
+        
+        var somaCal = calBeijo + calMalhacao;
+        document.getElementById("somaCal").innerHTML = somaCal;
+
+        var calSemana = somaCal * 7;
+        document.getElementById("calSemana").innerHTML = calSemana;
+
+        var calMes = calSemana * 30;
+        document.getElementById("calMes").innerHTML = calMes;
+
+
+    }
+
+</script>

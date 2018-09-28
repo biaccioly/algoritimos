@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercicio2</title>
+</head>
+<body>
+    Quanto dinheiro você tem? <input id="dinheiro"> <br>
+    Valor da Pizza : <input id="valor"><br>
+    <button onclick='calcular()'>Da pra pedir?</button>
+    <br><br>
+    <div id="resultado1" style="display:none;">Dá pra pedir! :D</div>
+    <div id="resultado2" style="display:none;">Não dá pra pedir! :(</div>
+</body>
+</html>
+<script>
+    function calcular() {
+
+        var dinheiroTotal = Number(document.getElementById("dinheiro").value);
+        var valorTotal = Number(document.getElementById("valor").value);
+
+        if (dinheiroTotal >= valorTotal) {
+            document.getElementById("resultado1").style.display = "block";
+            document.getElementById("resultado2").style.display = "none";
+            
+        }
+        else {
+            document.getElementById("resultado2").style.display = "block";
+            document.getElementById("resultado1").style.display = "none"
+        }
+
+
+
+    }
+</script>
